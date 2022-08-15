@@ -22,7 +22,6 @@ keymap.set('n', 'te', ':tabedit')
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 -- Move window
---keymap.set('n', '<C-space>', '<C-w>w')
 keymap.set('', 'sh', '<C-w>h')
 keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
@@ -57,6 +56,8 @@ local function vmap(shortcut, command, opts)
 	vim.keymap.set("v", shortcut, command, opts or { noremap = true, silent = true })
 end
 
+--keymap.set('n', '<C-Space>', '<C-w>w')
+map('<Space>', '<C-w>w')
 -- ** Util Functions ***************
 
 -- insert Esc

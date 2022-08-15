@@ -5,6 +5,7 @@ require('plugins')
 require 'lspconfig'.tsserver.setup {}
 --require('lspconfig')
 --require('lspsaga')
+require('null-ls')
 
 local has = function(x)
   return vim.fn.has(x) == 1
@@ -18,4 +19,3 @@ end
 if is_win then
   require('windows')
 end
-

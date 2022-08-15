@@ -24,11 +24,9 @@ bufferline.setup({
     },
     buffer_selected = {
       fg = '#fdf6e3',
-      underline = true,
       undercurl = true,
       italic = true,
       bold = true,
-      --gui = "bold",
     },
     fill = {
       bg = '#073642'
