@@ -104,12 +104,12 @@ nmap('<Leader>p', ':!python3 %<cr>')
 -- " Move selected line / block of text in visual mode
 -- " alt + k to move up
 -- " alt + j to move down
-nmap('<M-k>', ':m .-2<CR>==')
-nmap('<M-j>', ':m .+1<CR>==')
+map('<M-k>', ':m .-2<CR>==')
+map('<M-j>', ':m .+1<CR>==')
 
 -- " Move lines 
-vmap('<M-k>:move', "'<-2<CR>gv-gv")
-vmap('<M-j>:move', "'>+1<CR>gv-gv")
+vmap('<M-k>', ":m '<-2<CR>gv-gv")
+vmap('<M-j>', ":m '>+1<CR>gv-gv")
 
 -- " Use directional arrows to resize windows
 -- " alt + shift + k to resize up
@@ -131,8 +131,7 @@ nmap('<Leader>d', 'dd')
 nmap('x', '"_x')
 
 --
-nmap('<C-p>', ':set paste<Return>a')
-  
+map('<C-p>', ':set paste<Return>a')
 -- " Increment/decrement
 nmap('+', '<C-a>')
 nmap('-', '<C-x>')
