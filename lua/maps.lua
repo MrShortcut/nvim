@@ -143,4 +143,61 @@ map('<M-w>', 'dB')
 nmap('<C-a>', 'gg<S-v>G')
 map('<leader>a', 'gg<S-v>G')
 
+-- " Change internal word
+map('<leader>n', 'ciw')
+
+-- " Delete until "
+map('<leader>c', 'dt"')
+
+-- " Delete until '
+map('<leader>C', 'dt\'')
+
+-- Delete this line
+map("<leader>d", "dd")
+
+-- Delete until space
+map("d<leader>d", "dt<Space>")
+
+-- Yank until space
+map("y<leader>y", "yt<Space>")
+
+-- Insert a new line up 
+map("<leader><leader>o", "O")
+
+-- Exit fast like EL ZORRO
+map("<leader>z", "<Esc>ZZ")
+
+-- Delete until >
+map("<leader>m", "dt>")
+
+-- Delete until <
+map("<leader>M", "dt<")
+
+-- Delete until ;
+map("<leader>p", "dt;")
+
+-- Delete until )
+map("<leader>9", "dt)")
+
+-- Delete until (
+map("<leader>8", "dt(")
+
+-- Delete until .
+map("<leader>.", "dt.")
+
+-- from Cursor delete until ,
+map("<leader>,", "dt,s<Esc>")
+
+-- Quick semi
+map("<leader>2,", "$a,")
+
+-- from C delete until ]
+map("<leader>2}", "dt]")
+
+-- from C delete until }
+map("<leader>}", "dt}")
+
+-- from C delete until /
+map("<leader>7", "dt/")
+
 -- CM4 Keymaps --------------------------------------
