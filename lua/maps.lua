@@ -200,12 +200,6 @@ map("<leader>}", "dt}")
 -- from C delete until /
 map("<leader>7", "dt/")
 
--- Ultra Fast Crolling up 
-map("k<leader>k", "18k")
-
--- Ultra Fast Crolling down
-map("j<leader>j", "18j")
-
 -- Fast delete entire current document
 map("<leader>backspace", "ggdG")
 
