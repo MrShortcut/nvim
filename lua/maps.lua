@@ -200,4 +200,22 @@ map("<leader>}", "dt}")
 -- from C delete until /
 map("<leader>7", "dt/")
 
+-- Ultra Fast Crolling up 
+map("k<leader>k", "18k")
+
+-- Ultra Fast Crolling down
+map("j<leader>j", "18j")
+
+-- Fast delete entire current document
+map("<leader>backspace", "ggdG")
+
+-- Change internal t
+map("<leader>N", "cit")
+
+-- Change internal B
+map("<leader>B", "ciB")
+
+-- Change internal b
+map("<leader>2b", "cib")
+	
 -- CM4 Keymaps --------------------------------------
