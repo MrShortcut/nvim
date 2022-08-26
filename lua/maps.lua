@@ -156,10 +156,10 @@ map('<leader>C', 'dt\'')
 map("<leader>d", "dd")
 
 -- Delete until space
-map("d<leader>d", "dt<Space>")
+--map("d<leader>d", "dt<Space>")
 
 -- Yank until space
-map("y<leader>y", "yt<Space>")
+--map("y<leader>y", "yt<Space>")
 
 -- Insert a new line up 
 map("<leader><leader>o", "O")
