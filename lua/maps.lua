@@ -211,5 +211,8 @@ map("<leader>B", "ciB")
 
 -- Change internal b
 map("<leader>2b", "cib")
+
+-- !J
+nmap("¿", "f<Space>a<CR><Esc>")
 	
 -- CM4 Keymaps --------------------------------------
