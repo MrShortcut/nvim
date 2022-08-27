@@ -41,19 +41,19 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 -- ** Util Functions ***************
 
 local function nmap(shortcut, command, opts)
-	vim.keymap.set("n", shortcut, command, opts or { noremap = true, silent = true })
+  vim.keymap.set("n", shortcut, command, opts or { noremap = true, silent = true })
 end
 
 local function map(shortcut, command, opts)
-	vim.keymap.set("", shortcut, command, opts or { noremap = true, silent = true })
+  vim.keymap.set("", shortcut, command, opts or { noremap = true, silent = true })
 end
 
 local function imap(shortcut, command, opts)
-	vim.keymap.set("i", shortcut, command, opts or { noremap = true, silent = true })
+  vim.keymap.set("i", shortcut, command, opts or { noremap = true, silent = true })
 end
 
 local function vmap(shortcut, command, opts)
-	vim.keymap.set("v", shortcut, command, opts or { noremap = true, silent = true })
+  vim.keymap.set("v", shortcut, command, opts or { noremap = true, silent = true })
 end
 
 --keymap.set('n', '<C-Space>', '<C-w>w')
@@ -72,6 +72,9 @@ keymap.set('n', '<Leader>w', ':wq!<CR>')
 
 -- Save file
 keymap.set('n', '<Leader>s', ':w<CR>')
+
+-- Format
+keymap.set('n', '<Leader>f', ':lua vim.lsp.buf.formatting_seq_sync()<CR>')
 
 -- Fast cursor Movement
 keymap.set('n', '<Leader>i', ':terminal<CR>')
@@ -107,13 +110,13 @@ nmap('<Leader>p', ':!python3 %<cr>')
 map('<M-k>', ':m .-2<CR>==')
 map('<M-j>', ':m .+1<CR>==')
 
--- " Move lines 
+-- " Move lines
 vmap('<M-k>', ":m '<-2<CR>gv-gv")
 vmap('<M-j>', ":m '>+1<CR>gv-gv")
 
 -- " Use directional arrows to resize windows
 -- " alt + shift + k to resize up
--- " alt + shift + j to resize down 
+-- " alt + shift + j to resize down
 nmap('<M-K>', ':resize -2<CR>')
 nmap('<M-J>', ':resize +2<CR>')
 nmap('<M-L>', ':vertical resize -2<CR>')
@@ -126,7 +129,7 @@ nmap('<Leader>r', ':!node %<CR>')
 nmap('<M-e>', '9<C-e>')
 nmap('<M-y>', '9<C-y>')
 
--- 
+--
 nmap('<Leader>d', 'dd')
 nmap('x', '"_x')
 
@@ -161,7 +164,7 @@ map("<leader>2d", "dt<Space>")
 -- Yank until space
 map("<leader>2y", "yt<Space>")
 
--- Insert a new line up 
+-- Insert a new line up
 map("<leader><leader>o", "O")
 
 -- Exit fast like EL ZORRO
@@ -214,5 +217,5 @@ map("<leader>2b", "cib")
 
 -- !J
 nmap("¿", "f<Space>a<CR><Esc>")
-	
+
 -- CM4 Keymaps --------------------------------------
