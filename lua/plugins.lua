@@ -4,7 +4,7 @@ if (not status) then
   return
 end
 
-vim.cmd [[packadd packer.nvim]]
+--vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -49,3 +49,13 @@ packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   end)
+
+vim.api.nvim_exec(
+  [[
+  augroup packer_ide_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]],
+  false
+)
