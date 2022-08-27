@@ -156,10 +156,10 @@ map('<leader>C', 'dt\'')
 map("<leader>d", "dd")
 
 -- Delete until space
---map("d<leader>d", "dt<Space>")
+map("<leader>2d", "dt<Space>")
 
 -- Yank until space
---map("y<leader>y", "yt<Space>")
+map("<leader>2y", "yt<Space>")
 
 -- Insert a new line up 
 map("<leader><leader>o", "O")
@@ -201,7 +201,7 @@ map("<leader>}", "dt}")
 map("<leader>7", "dt/")
 
 -- Fast delete entire current document
-map("<leader>backspace", "ggdG")
+map("<leader><Backspace>", "ggdG")
 
 -- Change internal t
 map("<leader>N", "cit")
