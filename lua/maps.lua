@@ -73,9 +73,6 @@ keymap.set('n', '<Leader>w', ':wq!<CR>')
 -- Save file
 keymap.set('n', '<Leader>s', ':w<CR>')
 
--- Format
-keymap.set('n', '<Leader>f', ':lua vim.lsp.buf.formatting_seq_sync()<CR>')
-
 -- Fast cursor Movement
 keymap.set('n', '<Leader>i', ':terminal<CR>')
 keymap.set('n', '<Leader>h', 'h _<ESC>')
@@ -218,4 +215,12 @@ map("<leader>2b", "cib")
 -- !J
 nmap("¿", "f<Space>a<CR><Esc>")
 
+-- Format
+keymap.set('n', '<Leader>f', ':lua vim.lsp.buf.formatting_seq_sync()<CR>')
+
+-- Change " -> '
+keymap.set('n', '<Leader>2f', "<Cmd>:%s/\"/'/g<CR>")
+
+-- Change !" -> '
+keymap.set('n', '<Leader>3f', "<Cmd>:%s/'/\"/g<CR>")
 -- CM4 Keymaps --------------------------------------
