@@ -1,6 +1,7 @@
---require('gitsigns').setup {}
---
-local status, git = pcall(require, "gitsigns")
-if (not status) then return end
+local status, git = pcall(require, 'gitsigns')
 
-git.setup {}
+if not status then
+  return
+end
+
+git.setup({})

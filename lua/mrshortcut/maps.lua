@@ -41,19 +41,19 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 -- ** Util Functions ***************
 
 local function nmap(shortcut, command, opts)
-  vim.keymap.set("n", shortcut, command, opts or { noremap = true, silent = true })
+  vim.keymap.set('n', shortcut, command, opts or { noremap = true, silent = true })
 end
 
 local function map(shortcut, command, opts)
-  vim.keymap.set("", shortcut, command, opts or { noremap = true, silent = true })
+  vim.keymap.set('', shortcut, command, opts or { noremap = true, silent = true })
 end
 
 local function imap(shortcut, command, opts)
-  vim.keymap.set("i", shortcut, command, opts or { noremap = true, silent = true })
+  vim.keymap.set('i', shortcut, command, opts or { noremap = true, silent = true })
 end
 
 local function vmap(shortcut, command, opts)
-  vim.keymap.set("v", shortcut, command, opts or { noremap = true, silent = true })
+  vim.keymap.set('v', shortcut, command, opts or { noremap = true, silent = true })
 end
 
 --keymap.set('n', '<C-Space>', '<C-w>w')
@@ -150,77 +150,74 @@ map('<leader>n', 'ciw')
 map('<leader>c', 'dt"')
 
 -- " Delete until '
-map('<leader>C', 'dt\'')
+map('<leader>C', "dt'")
 
 -- Delete this line
-map("<leader>d", "dd")
+map('<leader>d', 'dd')
 
 -- Delete until space
-map("<leader>2d", "dt<Space>")
+map('<leader>2d', 'dt<Space>')
 
 -- Yank until space
-map("<leader>2y", "yt<Space>")
+map('<leader>2y', 'yt<Space>')
 
 -- Insert a new line up
-map("<leader><leader>o", "O")
+map('<leader><leader>o', 'O')
 
 -- Exit fast like EL ZORRO
-map("<leader>z", "<Esc>ZZ")
+map('<leader>z', '<Esc>ZZ')
 
 -- Delete until >
-map("<leader>m", "dt>")
+map('<leader>m', 'dt>')
 
 -- Delete until <
-map("<leader>M", "dt<")
+map('<leader>M', 'dt<')
 
 -- Delete until ;
-map("<leader>p", "dt;")
+map('<leader>p', 'dt;')
 
 -- Delete until )
-map("<leader>9", "dt)")
+map('<leader>9', 'dt)')
 
 -- Delete until (
-map("<leader>8", "dt(")
+map('<leader>8', 'dt(')
 
 -- Delete until .
-map("<leader>.", "dt.")
+map('<leader>.', 'dt.')
 
 -- from Cursor delete until ,
-map("<leader>,", "dt,s<Esc>")
+map('<leader>,', 'dt,s<Esc>')
 
 -- Quick semi
-map("<leader>2,", "$a,")
+map('<leader>2,', '$a,')
 
 -- from C delete until ]
-map("<leader>2}", "dt]")
+map('<leader>2}', 'dt]')
 
 -- from C delete until }
-map("<leader>}", "dt}")
+map('<leader>}', 'dt}')
 
 -- from C delete until /
-map("<leader>7", "dt/")
+map('<leader>7', 'dt/')
 
 -- Fast delete entire current document
-map("<leader><Backspace>", "ggdG")
+map('<leader><Backspace>', 'ggdG')
 
 -- Change internal t
-map("<leader>N", "cit")
+map('<leader>N', 'cit')
 
 -- Change internal B
-map("<leader>B", "ciB")
+map('<leader>B', 'ciB')
 
 -- Change internal b
-map("<leader>2b", "cib")
+map('<leader>2b', 'cib')
 
 -- !J
-nmap("¿", "f<Space>a<CR><Esc>")
-
--- Format
-keymap.set('n', '<Leader>f', ':lua vim.lsp.buf.formatting_seq_sync()<CR>')
+nmap('¿', 'f<Space>a<CR><Esc>')
 
 -- Change " -> '
-keymap.set('n', '<Leader>2f', "<Cmd>:%s/\"/'/g<CR>")
+keymap.set('n', '<Leader>2f', '<Cmd>:%s/"/\'/g<CR>')
 
 -- Change !" -> '
-keymap.set('n', '<Leader>3f', "<Cmd>:%s/'/\"/g<CR>")
+keymap.set('n', '<Leader>3f', '<Cmd>:%s/\'/"/g<CR>')
 -- CM4 Keymaps --------------------------------------
