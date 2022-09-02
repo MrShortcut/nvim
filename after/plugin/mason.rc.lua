@@ -8,8 +8,5 @@ mason.setup({
 })
 
 lspconfig.setup {
-  --ensure_installed = { "sumneko_lua", "tailwindcss" },
-  automatic_installation = true,
+  ensure_installed = { "sumneko_lua", "tailwindcss" },
 }
-
-require 'lspconfig'.tailwindcss.setup{}

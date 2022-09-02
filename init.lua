@@ -3,6 +3,7 @@ require('highlights')
 require('maps')
 require('plugins')
 require 'lspconfig'.tsserver.setup {}
+--require 'lspconfig'.tailwindcss.setup{}
 --require('lspconfig')
 --require('lspsaga')
 require('null-ls')

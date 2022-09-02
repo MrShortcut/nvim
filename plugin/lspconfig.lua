@@ -77,7 +77,7 @@ nvim_lsp.flow.setup {
 --  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
 --  cmd = { "typescript-language-server", "--stdio" },
 --  capabilities = capabilities,
-  --root_dir = function() return vim.loop.cwd() end      -- run lsp for javascript in any directory
+--root_dir = function() return vim.loop.cwd() end      -- run lsp for javascript in any directory
 --}
 
 nvim_lsp.sourcekit.setup {
@@ -103,6 +103,7 @@ nvim_lsp.sumneko_lua.setup {
 }
 
 nvim_lsp.tailwindcss.setup {}
+require 'lspconfig'.tailwindcss.setup {}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
