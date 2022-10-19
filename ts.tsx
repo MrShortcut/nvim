@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function Ok( ) {
+export default function Ok() {
+  const [ok, setOk] = useState(0)
   return <div>
-        <header>
-          <h1>ok</h1>
-        </header>
+    <body>
+      <header>
+        <h1>ok</h1>
+      </header>
+    </body>
   </div>
 }
 
