@@ -224,3 +224,50 @@ keymap.set('n', '<Leader>2f', "<Cmd>:%s/\"/'/g<CR>")
 -- Change !" -> '
 keymap.set('n', '<Leader>3f', "<Cmd>:%s/'/\"/g<CR>")
 -- CM4 Keymaps --------------------------------------
+
+-- Toggle comment
+function toggle_comment()
+    local current_line = vim.fn.getline('.')
+    local commented_line = string.match(current_line, '^%s*%-%-')
+
+   -- Si la línea está comentada, la descomentamos eliminando los dos guiones iniciales
+  if commented_line then
+      vim.fn.setline('.', vim.split(current_line, '^%s*%-%-')[2])
+  -- Si la línea no está comentada, la comentamos agregando dos guiones al inicio
+  else
+      vim.fn.setline('.', {'--' .. current_line})
+  end
+end
+
+-- Mapeos de teclado para alternar comentarios en modo normal y visual
+vim.api.nvim_set_keymap('n', '<Leader>1', ':lua toggle_comment()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<Leader>1', ':lua toggle_comment()<CR>', { noremap = true, silent = true })
+
+
+-- Select lines Toggle comment
+function toggle_comment_selectedLines()
+    local mode = vim.fn.mode()
+    local start_line, end_line = vim.fn.line("'<"), vim.fn.line("'>")
+
+    for line = start_line, end_line do
+        local current_line = vim.fn.getline(line)
+        local commented_line = string.match(current_line, '^%s*%-%-')
+
+-- Si la línea está comentada, la descomentamos eliminando los dos guiones iniciales
+        if commented_line then
+            vim.fn.setline(line, vim.split(current_line, '^%s*%-%-')[2])
+-- Si la línea no está comentada, la comentamos agregando dos guiones al inicio
+        else
+            vim.fn.setline(line, {'--' .. current_line})
+        end
+    end
+
+-- Si estamos en el modo visual, salimos del modo visual después de alternar los comentarios
+    if mode == 'v' or mode == 'V' then
+        vim.cmd('normal! `<')
+        vim.cmd('normal! >`')
+    end
+end
+-- Mapeos de teclado para alternar comentarios en modo normal y visual
+vim.api.nvim_set_keymap('n', '<Leader>2', ':lua toggle_comment_selectedLines()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<Leader>2', ':lua toggle_comment_selectedLines()<CR>', { noremap = true, silent = true })
